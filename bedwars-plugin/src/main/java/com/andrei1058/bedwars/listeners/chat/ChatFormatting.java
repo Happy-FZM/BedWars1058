@@ -31,6 +31,7 @@ import com.andrei1058.bedwars.api.server.ServerType;
 import com.andrei1058.bedwars.arena.Arena;
 import com.andrei1058.bedwars.commands.shout.ShoutCommand;
 import com.andrei1058.bedwars.configuration.Permissions;
+import com.andrei1058.bedwars.dreamcloud.Utils;
 import com.andrei1058.bedwars.support.papi.SupportPAPI;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
@@ -133,6 +134,7 @@ public class ChatFormatting implements Listener {
 
     private static String parsePHolders(String content, Player player, @Nullable ITeam team) {
         content = content
+                .replace("{DcRank}", Utils.getPlayerRank(player))
                 .replace("{vPrefix}", getChatSupport().getPrefix(player))
                 .replace("{vSuffix}", getChatSupport().getSuffix(player))
                 .replace("{playername}", player.getName())

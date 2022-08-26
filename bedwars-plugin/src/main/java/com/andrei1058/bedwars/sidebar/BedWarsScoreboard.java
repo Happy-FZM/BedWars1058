@@ -29,6 +29,7 @@ import com.andrei1058.bedwars.api.language.Language;
 import com.andrei1058.bedwars.api.language.Messages;
 import com.andrei1058.bedwars.api.server.ServerType;
 import com.andrei1058.bedwars.arena.Arena;
+import com.andrei1058.bedwars.dreamcloud.Utils;
 import com.andrei1058.spigot.sidebar.*;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -652,7 +653,9 @@ public class BedWarsScoreboard {
 
         strings = new ArrayList<>();
         for (String string : Language.getList(getPlayer(), path)) {
-            strings.add(string.replace("{vPrefix}", BedWars.getChatSupport().getPrefix(targetPlayer)).replace("{vSuffix}", BedWars.getChatSupport().getSuffix(targetPlayer)));
+            strings.add(string.replace("{vPrefix}", BedWars.getChatSupport().getPrefix(targetPlayer))
+                    .replace("{vSuffix}", BedWars.getChatSupport().getSuffix(targetPlayer))
+                    .replace("{DcRank}", Utils.getPlayerRank(targetPlayer)));
         }
 
         if (strings.size() == 1) {

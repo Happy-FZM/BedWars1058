@@ -71,8 +71,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.10.1</version>
                 <configuration>
-                    <source>11</source>
-                    <target>11</target>
+                    <source>8</source>
+                    <target>8</target>
                 </configuration>
             </plugin>
             <plugin>
@@ -104,8 +104,6 @@
         <module>versionsupport_1_8_R3</module>
         <module>versionsupport_1_12_R1</module>
         <module>versionsupport_common</module>
-        <module>versionsupport_v1_16_R3</module>
-        <module>versionsupport_v1_17_R1</module>
         <module>versionsupport_v1_18_R1</module>
     </modules>
 
